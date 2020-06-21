@@ -9,6 +9,9 @@ body {
   transform: translate(-50%, -50%);
   top: 10%;
   left: 50%;
+}
+
+.name-div {
   white-space: nowrap;
 }
 

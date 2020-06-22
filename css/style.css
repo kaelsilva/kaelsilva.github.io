@@ -1,6 +1,7 @@
 body {
   background: black;
-  font-family: "Oswald", sans-serif;
+  /* font-family: "Oswald", sans-serif; */
+  font-family: 'Orbitron', sans-serif;
   /* font-style: italic; */
 }
 
@@ -37,7 +38,7 @@ body {
   content: attr(data-text);
   position: absolute;
   left: 2px;
-  text-shadow: -5px 0 lightgreen;
+  text-shadow: -3px 0 lightgreen;
   background: black;
   overflow: hidden;
   top: 0;

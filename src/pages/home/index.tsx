@@ -5,6 +5,8 @@ import {
   Background,
   Container,
   GlobalStyle,
+  Greetings,
+  Subtitle,
 } from './styles';
 
 const Home: React.FC = () => (
@@ -13,7 +15,9 @@ const Home: React.FC = () => (
     <Container>
       <Background>
         <Content>
-          <AuthorName>Kael Silva</AuthorName>
+          <Greetings>Hello! My name is</Greetings>
+          <AuthorName>KAEL SILVA</AuthorName>
+          <Subtitle>Full-stack Developer</Subtitle>
         </Content>
       </Background>
     </Container>

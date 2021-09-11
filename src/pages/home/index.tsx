@@ -7,6 +7,10 @@ import {
   GlobalStyle,
   Greetings,
   Subtitle,
+  ExploreContainer,
+  ExploreItem,
+  ContactButton,
+  ImageDisplay,
 } from './styles';
 
 const Home: React.FC = () => (
@@ -19,6 +23,15 @@ const Home: React.FC = () => (
           <AuthorName>KAEL SILVA</AuthorName>
           <Subtitle>Full-stack Developer</Subtitle>
         </Content>
+        <ExploreContainer>
+          <ExploreItem>About me</ExploreItem>
+          <ExploreItem>Skills</ExploreItem>
+          <ExploreItem>Portfolio</ExploreItem>
+          <ContactButton>
+            <ExploreItem>Contact me</ExploreItem>
+          </ContactButton>
+          <ImageDisplay />
+        </ExploreContainer>
       </Background>
     </Container>
   </>

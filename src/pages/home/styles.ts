@@ -1,12 +1,15 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { shade } from 'polished';
+import DisplayImage from '../../assets/skull-no-background.png';
 
 export const Container = styled.div`
-  height: 100%;
+  height: 1vh;
   margin: 0;
 `;
 
 export const Content = styled.div`
   background-color: #0c0826;
+  min-width: 450px;
   width: 768px;
   margin: 0;
   height: 100vh;
@@ -18,6 +21,7 @@ export const Content = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+    position: absolute;
   }
 `;
 
@@ -66,5 +70,66 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     text-decoration: none;
+  }
+`;
+
+export const ExploreContainer = styled.nav`
+  font-family: 'Roboto', sans-serif;
+  width: auto;
+  color: #0c0826;
+
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 768px;
+  padding: 40px 40px 0px 10px;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    visibility: hidden;
+  }
+`;
+
+export const ExploreItem = styled.a`
+  list-style-type: none;
+  font-size: 20px;
+
+  display: flex;
+  padding: 5px;
+
+  @media only screen and (max-width: 950px) {
+    margin: 5vh 0 0 5vh;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const ContactButton = styled.span`
+  background-color: #0388a6;
+  border-radius: 10%;
+  color: #ffffff;
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${shade(0.2, '#0388a6')};
+  }
+`;
+
+export const ImageDisplay = styled.div`
+  flex: 1;
+  background: url(${DisplayImage}) no-repeat center;
+  background-size: cover;
+  visibility: visible;
+  position: fixed;
+
+  margin-left: 10%;
+  margin-top: 5%;
+  height: 500px;
+  width: 500px;
+
+  @media only screen and (max-width: 768px) {
+    visibility: hidden;
   }
 `;

@@ -2,6 +2,16 @@ import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { shade } from 'polished';
 import DisplayImage from '../../assets/skull-no-background.png';
 
+export const MobileMenu = styled.div`
+  display: none;
+  visibility: hidden;
+
+  @media only screen and (max-width: 700px) {
+    display: block;
+    visibility: visible;
+  }
+`;
+
 export const Container = styled.div`
   height: 100vh;
   display: flex;
@@ -115,22 +125,31 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     text-decoration: none;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export const ExploreContainer = styled.nav`
+  position: absolute;
+  background-color: #0388a6;
   font-family: 'Roboto', sans-serif;
-  width: auto;
-  color: #0c0826;
+  color: #fff;
 
   display: flex;
+  flex: 1;
   flex-direction: row;
-  height: fit-content;
-  width: 768px;
-  padding: 40px 40px 0px 10px;
-  justify-content: space-between;
+  height: 5vh;
+  width: 100vw;
+  justify-content: space-around;
+  /* padding: 40px 40px 0px 10px; */
 
-  @media only screen and (max-width: 768px) {
-    visibility: hidden;
+  @media only screen and (max-width: 700px) {
+    /* visibility: hidden; */
+    height: 7vh;
+    align-items: center;
   }
 `;
 
@@ -139,21 +158,18 @@ export const ExploreItem = styled.a`
   font-size: 20px;
 
   display: flex;
+  flex: 1;
   padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: groove;
 
-  @media only screen and (max-width: 950px) {
-    margin: 5vh 0 0 5vh;
+  @media only screen and (max-width: 700px) {
+    visibility: hidden;
   }
-
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-export const ContactButton = styled.span`
-  background-color: #0388a6;
-  border-radius: 10%;
-  color: #ffffff;
 
   &:hover {
     cursor: pointer;

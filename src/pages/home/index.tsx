@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  AuthorName,
+  MarketName,
   Content,
   Background,
   Container,
@@ -11,28 +11,23 @@ import {
   ExploreItem,
   ContactButton,
   ImageDisplay,
+  AnimationContainer,
 } from './styles';
 
 const Home: React.FC = () => (
   <>
     <GlobalStyle />
+
     <Container>
-      <Background>
-        <Content>
+      <Content>
+        <AnimationContainer>
           <Greetings>Hello! My name is</Greetings>
-          <AuthorName>KAEL SILVA</AuthorName>
+          <MarketName>Kael Silva</MarketName>
           <Subtitle>Full-stack Developer</Subtitle>
-        </Content>
-        <ExploreContainer>
-          <ExploreItem>About me</ExploreItem>
-          <ExploreItem>Skills</ExploreItem>
-          <ExploreItem>Portfolio</ExploreItem>
-          <ContactButton>
-            <ExploreItem>Contact me</ExploreItem>
-          </ContactButton>
-          <ImageDisplay />
-        </ExploreContainer>
-      </Background>
+        </AnimationContainer>
+      </Content>
+
+      <Background />
     </Container>
   </>
 );

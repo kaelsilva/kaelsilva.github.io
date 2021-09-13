@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { FiMenu } from 'react-icons/fi';
+import {
+  FiMenu,
+  FiX,
+  FiHome,
+  FiInfo,
+  FiBriefcase,
+  FiSettings,
+  FiAtSign,
+} from 'react-icons/fi';
 import {
   MarketName,
   Content,
@@ -12,10 +20,13 @@ import {
   ExploreItem,
   MobileMenu,
   AnimationContainer,
+  MenuContainer,
+  MenuIconContainer,
+  ItemIcon,
 } from './styles';
 
 const Home: React.FC = () => {
-  const [menuClicked, setMenuClicked] = useState<boolean>(false);
+  const [menuClicked, setMenuClicked] = useState<boolean>(true);
 
   // useEffect(() => setMenuClicked(true), [menuClicked]);
 
@@ -24,12 +35,38 @@ const Home: React.FC = () => {
       <GlobalStyle />
       <ExploreContainer>
         <MobileMenu>
-          <FiMenu size="5vh" onClick={() => setMenuClicked(true)} />
+          <FiMenu size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
         </MobileMenu>
-        <ExploreItem href="#about">About me</ExploreItem>
-        <ExploreItem href="#portfolio">Portfolio</ExploreItem>
-        <ExploreItem href="#skills">Skills</ExploreItem>
-        <ExploreItem href="#contact">Contact me</ExploreItem>
+        <ExploreItem href="#">
+          <ItemIcon>
+            <FiHome />
+          </ItemIcon>
+          Home
+        </ExploreItem>
+        <ExploreItem href="#about">
+          <ItemIcon>
+            <FiInfo />
+          </ItemIcon>
+          About me
+        </ExploreItem>
+        <ExploreItem href="#portfolio">
+          <ItemIcon>
+            <FiBriefcase />
+          </ItemIcon>
+          Portfolio
+        </ExploreItem>
+        <ExploreItem href="#skills">
+          <ItemIcon>
+            <FiSettings />
+          </ItemIcon>
+          Skills
+        </ExploreItem>
+        <ExploreItem href="#contact">
+          <ItemIcon>
+            <FiAtSign />
+          </ItemIcon>
+          Contact me
+        </ExploreItem>
       </ExploreContainer>
 
       <Container>
@@ -39,12 +76,19 @@ const Home: React.FC = () => {
             <MarketName>Kael Silva</MarketName>
             <Subtitle>Full-stack Developer</Subtitle>
           </AnimationContainer>
+          {!menuClicked && (
+            <MenuContainer>
+              <MenuIconContainer>
+                <FiX size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
+              </MenuIconContainer>
+            </MenuContainer>
+          )}
         </Content>
 
         <Background />
       </Container>
 
-      {menuClicked ? alert('menu clicked!') : null}
+      <Container />
     </>
   );
 };

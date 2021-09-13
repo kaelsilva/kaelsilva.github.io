@@ -9,7 +9,28 @@ export const MobileMenu = styled.div`
   @media only screen and (max-width: 700px) {
     display: block;
     visibility: visible;
+    padding-left: 2vh;
   }
+`;
+
+export const MenuContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  background-color: #0388a6;
+`;
+
+export const MenuIconContainer = styled.div`
+  display: flex;
+  flex: 1;
+  height: 8vh;
+
+  color: #fff;
+  align-items: center;
+  padding-right: 2vh;
+  flex-direction: row;
+  justify-content: flex-end;
 `;
 
 export const Container = styled.div`
@@ -133,7 +154,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const ExploreContainer = styled.nav`
-  position: absolute;
+  position: fixed;
   background-color: #0388a6;
   font-family: 'Roboto', sans-serif;
   color: #fff;
@@ -159,13 +180,14 @@ export const ExploreItem = styled.a`
 
   display: flex;
   flex: 1;
+  flex-direction: row;
   padding: 5px;
   justify-content: center;
   align-items: center;
   border-radius: 5%;
-  border-color: #fff;
+  /* border-color: #fff;
   border-width: 2px;
-  border-style: groove;
+  border-style: groove; */
 
   @media only screen and (max-width: 700px) {
     visibility: hidden;
@@ -175,6 +197,10 @@ export const ExploreItem = styled.a`
     cursor: pointer;
     background-color: ${shade(0.2, '#0388a6')};
   }
+`;
+
+export const ItemIcon = styled.div`
+  margin-right: 1vw;
 `;
 
 export const ImageDisplay = styled.div`

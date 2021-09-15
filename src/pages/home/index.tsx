@@ -32,7 +32,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle menuClicked={menuClicked} />
       <ExploreContainer>
         <MobileMenu>
           <FiMenu size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
@@ -77,7 +77,7 @@ const Home: React.FC = () => {
             <Subtitle>Full-stack Developer</Subtitle>
           </AnimationContainer>
           {!menuClicked && (
-            <MenuContainer>
+            <MenuContainer menuClicked={menuClicked}>
               <MenuIconContainer>
                 <FiX size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
               </MenuIconContainer>
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
         <Background />
       </Container>
 
-      <Container />
+      {/* <Container menuClicked={menuClicked} /> */}
     </>
   );
 };

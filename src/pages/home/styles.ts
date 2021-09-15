@@ -1,6 +1,10 @@
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
+import styled, { createGlobalStyle, css, keyframes } from 'styled-components';
 import { shade } from 'polished';
 import DisplayImage from '../../assets/skull-no-background.png';
+
+interface Menu {
+  menuClicked: boolean;
+}
 
 export const MobileMenu = styled.div`
   display: none;
@@ -9,16 +13,29 @@ export const MobileMenu = styled.div`
   @media only screen and (max-width: 700px) {
     display: block;
     visibility: visible;
-    padding-left: 2vh;
+    padding-left: 8vw;
   }
 `;
 
-export const MenuContainer = styled.div`
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const MenuContainer = styled.div<Menu>`
   height: 100vh;
   width: 100vw;
   display: flex;
-  position: absolute;
+  position: fixed;
   background-color: #0388a6;
+
+  animation: ${appearFromLeft} 0.5s;
 `;
 
 export const MenuIconContainer = styled.div`
@@ -47,17 +64,6 @@ export const Content = styled.div`
   width: 100%;
   max-width: 700px;
   background-color: #0c0826;
-`;
-
-const appearFromLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 `;
 
 export const AnimationContainer = styled.div`
@@ -140,17 +146,25 @@ export const Background = styled.div`
   background-size: cover;
 `;
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<Menu>`
   body {
     margin: 0;
     padding: 0;
     text-decoration: none;
+
+    ${props =>
+      !props.menuClicked &&
+      css`
+        overflow: hidden;
+      `}
   }
 
   a {
     text-decoration: none;
     color: inherit;
   }
+
+  
 `;
 
 export const ExploreContainer = styled.nav`

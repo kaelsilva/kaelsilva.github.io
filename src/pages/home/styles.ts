@@ -1,6 +1,8 @@
-import styled, { createGlobalStyle, css, keyframes } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import { shade } from 'polished';
 import DisplayImage from '../../assets/skull-no-background.png';
+
+import AppearFromLeft from '../../components/animations/AppearFromLeft';
 
 interface Menu {
   menuClicked: boolean;
@@ -11,31 +13,24 @@ export const MobileMenu = styled.div`
   visibility: hidden;
 
   @media only screen and (max-width: 700px) {
-    display: block;
+    display: flex;
+    flex: 1;
+    width: 100vw;
+    flex-direction: row;
+    position: fixed;
     visibility: visible;
     padding-left: 8vw;
   }
 `;
 
-const appearFromLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-export const MenuContainer = styled.div<Menu>`
+export const MenuContainer = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
   position: fixed;
   background-color: #0388a6;
 
-  animation: ${appearFromLeft} 0.5s;
+  animation: ${AppearFromLeft} 0.5s;
 `;
 
 export const MenuIconContainer = styled.div`
@@ -45,7 +40,7 @@ export const MenuIconContainer = styled.div`
 
   color: #fff;
   align-items: center;
-  padding-right: 2vh;
+  padding-right: 2vw;
   flex-direction: row;
   justify-content: flex-end;
 `;
@@ -71,7 +66,7 @@ export const AnimationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: ${appearFromLeft} 2s;
+  animation: ${AppearFromLeft} 2s;
   form {
     margin: 80px 0;
     width: 340px;

@@ -8,6 +8,23 @@ interface Menu {
   menuClicked: boolean;
 }
 
+export const UnorderedList = styled.section`
+  margin: 1vh 0 0 3vw;
+  padding: 0;
+  color: #f205cb;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+`;
+
+export const ListItem = styled.p`
+  margin: 0.5vh 0 0 0;
+  padding: 0;
+  color: #0388a6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+`;
+
 export const DisplayContainer = styled.div`
   height: 100vh;
   width: 100%;

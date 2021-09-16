@@ -26,6 +26,8 @@ import {
   ItemIcon,
   DisplayContainer,
   Title,
+  UnorderedList,
+  ListItem,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -97,7 +99,40 @@ const Home: React.FC = () => {
           <Background />
         </DisplayContainer>
         <Content>
-          <Greetings>Hello! My name is</Greetings>
+          <UnorderedList>
+            Academic
+            <ListItem>
+              I have Bachelor degree in Information Systems at Universidade
+              Federal do Rio Grande do Norte (UFRN).
+            </ListItem>
+            <ListItem>
+              In my time during graduation, I’ve made projects with TypeScript,
+              Node and React for Web. Other projects were made with Python, Java
+              and C. Also, I’ve made some search projects with MATLAB about
+              gravimetry inversion,
+            </ListItem>
+          </UnorderedList>
+          <UnorderedList>
+            Work
+            <ListItem>
+              I’m interested primarly with full-stack work of web applications.
+              By the way, anything involving programming, product and service
+              catches my attention.
+            </ListItem>
+            <ListItem>
+              I’ve not yet accomplished any expressive work for the market. Yet,
+              I’m pretty sure that soon enough it will be done, either working
+              for someone or for my own personal projects.
+            </ListItem>
+          </UnorderedList>
+          <UnorderedList>
+            Hobbies
+            <ListItem>
+              I like to jog, take ininterrupt travels, play videogames, listen
+              to some music and find out what’s new about everything in the
+              world.
+            </ListItem>
+          </UnorderedList>
         </Content>
       </Container>
 

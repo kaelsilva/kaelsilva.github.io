@@ -24,6 +24,8 @@ import {
   MenuContainer,
   MenuIconContainer,
   ItemIcon,
+  DisplayContainer,
+  Title,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -87,6 +89,16 @@ const Home: React.FC = () => {
         </Content>
 
         <Background />
+      </Container>
+
+      <Container id="about">
+        <DisplayContainer>
+          <Title>About me</Title>
+          <Background />
+        </DisplayContainer>
+        <Content>
+          <Greetings>Hello! My name is</Greetings>
+        </Content>
       </Container>
 
       <Container />

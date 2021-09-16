@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   FiMenu,
   FiX,
@@ -8,6 +8,7 @@ import {
   FiSettings,
   FiAtSign,
 } from 'react-icons/fi';
+
 import {
   MarketName,
   Content,
@@ -77,7 +78,7 @@ const Home: React.FC = () => {
             <Subtitle>Full-stack Developer</Subtitle>
           </AnimationContainer>
           {!menuClicked && (
-            <MenuContainer menuClicked={menuClicked}>
+            <MenuContainer>
               <MenuIconContainer>
                 <FiX size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
               </MenuIconContainer>
@@ -88,7 +89,7 @@ const Home: React.FC = () => {
         <Background />
       </Container>
 
-      {/* <Container menuClicked={menuClicked} /> */}
+      <Container />
     </>
   );
 };

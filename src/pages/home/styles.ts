@@ -8,6 +8,28 @@ interface Menu {
   menuClicked: boolean;
 }
 
+export const DisplayContainer = styled.div`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #f205b3;
+`;
+
+export const Title = styled.div`
+  font-family: 'Roboto', sans-serif;
+  font-size: 56px;
+  color: #0c0826;
+  align-self: center;
+  margin-top: 8vh;
+  flex: content;
+
+  @media only screen and (max-width: 700px) {
+    text-indent: -9999px;
+  }
+`;
+
 export const MobileMenu = styled.div`
   display: none;
   visibility: hidden;
@@ -138,7 +160,7 @@ export const ExploreContainer = styled.nav`
   display: flex;
   flex: 1;
   flex-direction: row;
-  height: 5vh;
+  height: 8vh;
   width: 100vw;
   justify-content: space-around;
   /* padding: 40px 40px 0px 10px; */
@@ -177,21 +199,4 @@ export const ExploreItem = styled.a`
 
 export const ItemIcon = styled.div`
   margin-right: 1vw;
-`;
-
-export const ImageDisplay = styled.div`
-  flex: 1;
-  background: url(${DisplayImage}) no-repeat center;
-  background-size: cover;
-  visibility: visible;
-  position: fixed;
-
-  margin-left: 10%;
-  margin-top: 5%;
-  height: 500px;
-  width: 500px;
-
-  @media only screen and (max-width: 768px) {
-    visibility: hidden;
-  }
 `;

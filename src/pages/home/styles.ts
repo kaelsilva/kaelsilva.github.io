@@ -8,7 +8,39 @@ interface Menu {
   menuClicked: boolean;
 }
 
-export const UnorderedList = styled.section`
+export const MobileMenuItem = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 10vh;
+  width: 100vw;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #fff;
+
+  margin-top: 2vh;
+`;
+
+export const MobileMenuItemContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10vw;
+`;
+
+export const ContactIcons = styled.section`
+  display: flex;
+  margin-top: 10vh;
+  justify-content: space-between;
+  width: 30vh;
+`;
+
+export const Topic = styled.section`
   margin: 1vh 0 0 3vw;
   padding: 0;
   color: #f205cb;
@@ -17,12 +49,16 @@ export const UnorderedList = styled.section`
   font-size: 24px;
 `;
 
-export const ListItem = styled.p`
+export const Paragraph = styled.p`
   margin: 0.5vh 0 0 0;
   padding: 0;
   color: #0388a6;
   font-family: 'Roboto', sans-serif;
-  font-size: 24px;
+  font-size: 14px;
+
+  ~ p {
+    margin-top: 5vh;
+  }
 `;
 
 export const DisplayContainer = styled.div`
@@ -68,13 +104,13 @@ export const MenuContainer = styled.div`
   display: flex;
   position: fixed;
   background-color: #0388a6;
+  flex-direction: column;
 
   animation: ${AppearFromLeft} 0.5s;
 `;
 
 export const MenuIconContainer = styled.div`
   display: flex;
-  flex: 1;
   height: 8vh;
 
   color: #fff;
@@ -216,4 +252,5 @@ export const ExploreItem = styled.a`
 
 export const ItemIcon = styled.div`
   margin-right: 1vw;
+  cursor: pointer;
 `;

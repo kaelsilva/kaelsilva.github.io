@@ -34,6 +34,7 @@ import {
   ContactIcons,
   MobileMenuItem,
   MobileMenuItemContainer,
+  TitleMobile,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -80,7 +81,7 @@ const Home: React.FC = () => {
         </ExploreItem>
       </ExploreContainer>
 
-      <Container>
+      <Container id="home">
         <Content>
           <AnimationContainer>
             <Greetings>Hello! My name is</Greetings>
@@ -162,6 +163,7 @@ const Home: React.FC = () => {
           <Background />
         </DisplayContainer>
         <Content>
+          <TitleMobile>About me</TitleMobile>
           <Topic>
             Academic
             <Paragraph>
@@ -201,6 +203,7 @@ const Home: React.FC = () => {
 
       <Container id="skills">
         <Content>
+          <TitleMobile>Skills</TitleMobile>
           <Paragraph>
             I’m initially focused in developing web apps with the Node, React
             (including Next.js), Docker and AWS. However, I see no problem with
@@ -237,12 +240,14 @@ const Home: React.FC = () => {
         </DisplayContainer>
 
         <Content>
+          <TitleMobile>Portfolio</TitleMobile>
           <Paragraph>Work in progress...</Paragraph>
         </Content>
       </Container>
 
       <Container id="contact">
         <Content>
+          <TitleMobile>Contact me</TitleMobile>
           <Paragraph>Feel free to contact me.</Paragraph>
           <Paragraph>I will answer as soon as possible.</Paragraph>
           <ContactIcons>

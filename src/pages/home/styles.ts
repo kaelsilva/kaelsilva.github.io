@@ -8,6 +8,20 @@ interface Menu {
   menuClicked: boolean;
 }
 
+export const TitleMobile = styled.div`
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  color: #f205cb;
+  align-self: center;
+  margin-bottom: 10vh;
+  flex: content;
+  text-indent: -9999px;
+
+  @media only screen and (max-width: 700px) {
+    text-indent: 0px;
+  }
+`;
+
 export const MobileMenuItem = styled.div`
   display: flex;
   justify-content: flex-start;

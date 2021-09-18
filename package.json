@@ -26,6 +26,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "deploy": "yarn build && ./node_modules/.bin/gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -54,6 +55,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.3.2"
   }
 }

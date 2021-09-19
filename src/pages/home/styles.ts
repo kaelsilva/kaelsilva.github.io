@@ -8,17 +8,59 @@ interface Menu {
   menuClicked: boolean;
 }
 
-export const TitleMobile = styled.div`
+export const ContactContainer = styled.article`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const PortfolioContainer = styled.article`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+`;
+
+export const SkillsContainer = styled.article`
+  display: flex;
+  padding-left: 5vw;
+`;
+
+export const AboutContainer = styled.article`
+  display: flex;
+`;
+
+export const Topic = styled.section`
+  margin: 1vh 3vw 0 3vw;
+  padding: 0;
+  color: #f205cb;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  min-width: 26vw;
+`;
+
+export const Title = styled.div`
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
   color: #f205cb;
+  display: flex;
+  flex: 1;
   align-self: center;
-  margin-bottom: 10vh;
-  flex: content;
-  text-indent: -9999px;
+  justify-content: center;
+  width: 100vw;
+  flex-basis: 100%;
+`;
 
-  @media only screen and (max-width: 700px) {
-    text-indent: 0px;
+export const Paragraph = styled.p`
+  color: #0388a6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+
+  ${SkillsContainer} & {
+    margin-top: 5vh;
+    margin: 0.5vh 0 0 0;
+    padding: 0 5vw 0 0;
   }
 `;
 
@@ -54,27 +96,6 @@ export const ContactIcons = styled.section`
   width: 30vh;
 `;
 
-export const Topic = styled.section`
-  margin: 1vh 0 0 3vw;
-  padding: 0;
-  color: #f205cb;
-  list-style: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-`;
-
-export const Paragraph = styled.p`
-  margin: 0.5vh 0 0 0;
-  padding: 0;
-  color: #0388a6;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-
-  ~ p {
-    margin-top: 5vh;
-  }
-`;
-
 export const DisplayContainer = styled.div`
   height: 100vh;
   width: 100%;
@@ -82,19 +103,6 @@ export const DisplayContainer = styled.div`
   flex: 1;
   flex-direction: column;
   background-color: #f205b3;
-`;
-
-export const Title = styled.div`
-  font-family: 'Roboto', sans-serif;
-  font-size: 56px;
-  color: #0c0826;
-  align-self: center;
-  margin-top: 8vh;
-  flex: content;
-
-  @media only screen and (max-width: 700px) {
-    text-indent: -9999px;
-  }
 `;
 
 export const MobileMenu = styled.div`
@@ -138,6 +146,23 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
+
+  &#about {
+    background-color: #0c0826;
+  }
+
+  &#skills {
+    background-color: #0c0826;
+  }
+
+  &#portfolio {
+    background-color: #0c0826;
+  }
+
+  &#contact {
+    background-color: #0c0826;
+  }
 `;
 
 export const Content = styled.div`

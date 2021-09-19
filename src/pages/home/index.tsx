@@ -10,6 +10,8 @@ import {
   FiLinkedin,
   FiMail,
   FiGithub,
+  FiBook,
+  FiCoffee,
 } from 'react-icons/fi';
 
 import {
@@ -27,14 +29,16 @@ import {
   MenuContainer,
   MenuIconContainer,
   ItemIcon,
-  DisplayContainer,
   Title,
   Topic,
   Paragraph,
   ContactIcons,
   MobileMenuItem,
   MobileMenuItemContainer,
-  TitleMobile,
+  AboutContainer,
+  SkillsContainer,
+  PortfolioContainer,
+  ContactContainer,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -158,13 +162,10 @@ const Home: React.FC = () => {
       </Container>
 
       <Container id="about">
-        <DisplayContainer>
-          <Title>About me</Title>
-          <Background />
-        </DisplayContainer>
-        <Content>
-          <TitleMobile>About me</TitleMobile>
+        <Title>About me</Title>
+        <AboutContainer>
           <Topic>
+            <FiBook size="16px" />
             Academic
             <Paragraph>
               I have Bachelor degree in Information Systems at Universidade
@@ -178,6 +179,7 @@ const Home: React.FC = () => {
             </Paragraph>
           </Topic>
           <Topic>
+            <FiBriefcase size="16px" />
             Work
             <Paragraph>
               I’m interested primarly with full-stack work of web applications.
@@ -191,6 +193,7 @@ const Home: React.FC = () => {
             </Paragraph>
           </Topic>
           <Topic>
+            <FiCoffee size="16px" />
             Hobbies
             <Paragraph>
               I like to jog, take ininterrupt travels, play videogames, listen
@@ -198,12 +201,12 @@ const Home: React.FC = () => {
               world.
             </Paragraph>
           </Topic>
-        </Content>
+        </AboutContainer>
       </Container>
 
       <Container id="skills">
-        <Content>
-          <TitleMobile>Skills</TitleMobile>
+        <Title>Skills</Title>
+        <SkillsContainer>
           <Paragraph>
             I’m initially focused in developing web apps with the Node, React
             (including Next.js), Docker and AWS. However, I see no problem with
@@ -225,29 +228,19 @@ const Home: React.FC = () => {
             non-conventional projects that creates its own marketshare just
             after existing.
           </Paragraph>
-        </Content>
-
-        <DisplayContainer>
-          <Title>Skills</Title>
-          <Background />
-        </DisplayContainer>
+        </SkillsContainer>
       </Container>
 
       <Container id="portfolio">
-        <DisplayContainer>
-          <Title>Portfolio</Title>
-          <Background />
-        </DisplayContainer>
-
-        <Content>
-          <TitleMobile>Portfolio</TitleMobile>
+        <Title>Portfolio</Title>
+        <PortfolioContainer>
           <Paragraph>Work in progress...</Paragraph>
-        </Content>
+        </PortfolioContainer>
       </Container>
 
       <Container id="contact">
-        <Content>
-          <TitleMobile>Contact me</TitleMobile>
+        <Title>Contact me</Title>
+        <ContactContainer>
           <Paragraph>Feel free to contact me.</Paragraph>
           <Paragraph>I will answer as soon as possible.</Paragraph>
           <ContactIcons>
@@ -273,12 +266,7 @@ const Home: React.FC = () => {
               <FiGithub size="28px" color="#fff" />
             </ItemIcon>
           </ContactIcons>
-        </Content>
-
-        <DisplayContainer>
-          <Title>Contact me</Title>
-          <Background />
-        </DisplayContainer>
+        </ContactContainer>
       </Container>
     </>
   );

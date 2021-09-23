@@ -16,13 +16,15 @@ export const ContactContainer = styled.article`
 `;
 
 export const PortfolioContainer = styled.article`
+  width: 100vw;
   display: flex;
-  flex: 1;
   justify-content: center;
 `;
 
 export const SkillsContainer = styled.article`
+  width: 100vw;
   display: flex;
+  justify-content: center;
   padding-left: 5vw;
 `;
 
@@ -55,12 +57,13 @@ export const Title = styled.div`
 export const Paragraph = styled.p`
   color: #0388a6;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 
   ${SkillsContainer} & {
     margin-top: 5vh;
     margin: 0.5vh 0 0 0;
     padding: 0 5vw 0 0;
+    width: 30vw;
   }
 `;
 
@@ -80,7 +83,7 @@ export const MobileMenuItem = styled.div`
 `;
 
 export const MobileMenuItemContainer = styled.div`
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
 
   display: flex;
@@ -125,6 +128,7 @@ export const MenuContainer = styled.div`
   width: 100vw;
   display: flex;
   position: fixed;
+  margin-top: 92vh;
   background-color: #0388a6;
   flex-direction: column;
 

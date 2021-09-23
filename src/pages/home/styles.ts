@@ -80,7 +80,7 @@ export const MobileMenuItem = styled.div`
 `;
 
 export const MobileMenuItemContainer = styled.div`
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
 
   display: flex;
@@ -125,6 +125,7 @@ export const MenuContainer = styled.div`
   width: 100vw;
   display: flex;
   position: fixed;
+  margin-top: 92vh;
   background-color: #0388a6;
   flex-direction: column;
 

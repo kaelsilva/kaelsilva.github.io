@@ -83,6 +83,70 @@ const Home: React.FC = () => {
           </ItemIcon>
           Contact me
         </ExploreItem>
+        {!menuClicked && (
+          <MenuContainer>
+            <MenuIconContainer>
+              <FiX size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
+            </MenuIconContainer>
+            <MobileMenuItemContainer>
+              <MobileMenuItem
+                onClick={() => {
+                  setMenuClicked(!menuClicked);
+                  window.location.href = '#';
+                }}
+              >
+                <ItemIcon>
+                  <FiHome />
+                </ItemIcon>
+                Home
+              </MobileMenuItem>
+              <MobileMenuItem
+                onClick={() => {
+                  setMenuClicked(!menuClicked);
+                  window.location.href = '#about';
+                }}
+              >
+                <ItemIcon>
+                  <FiInfo />
+                </ItemIcon>
+                About me
+              </MobileMenuItem>
+              <MobileMenuItem
+                onClick={() => {
+                  setMenuClicked(!menuClicked);
+                  window.location.href = '#skills';
+                }}
+              >
+                <ItemIcon>
+                  <FiSettings />
+                </ItemIcon>
+                Skills
+              </MobileMenuItem>
+              <MobileMenuItem
+                onClick={() => {
+                  setMenuClicked(!menuClicked);
+                  window.location.href = '#portfolio';
+                }}
+              >
+                <ItemIcon>
+                  <FiBriefcase />
+                </ItemIcon>
+                Portfolio
+              </MobileMenuItem>
+              <MobileMenuItem
+                onClick={() => {
+                  setMenuClicked(!menuClicked);
+                  window.location.href = '#contact';
+                }}
+              >
+                <ItemIcon>
+                  <FiAtSign />
+                </ItemIcon>
+                Contact me
+              </MobileMenuItem>
+            </MobileMenuItemContainer>
+          </MenuContainer>
+        )}
       </ExploreContainer>
 
       <Container id="home">
@@ -92,70 +156,6 @@ const Home: React.FC = () => {
             <MarketName>Kael Silva</MarketName>
             <Subtitle>Full-stack Developer</Subtitle>
           </AnimationContainer>
-          {!menuClicked && (
-            <MenuContainer>
-              <MenuIconContainer>
-                <FiX size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
-              </MenuIconContainer>
-              <MobileMenuItemContainer>
-                <MobileMenuItem
-                  onClick={() => {
-                    setMenuClicked(!menuClicked);
-                    window.location.href = '#';
-                  }}
-                >
-                  <ItemIcon>
-                    <FiHome />
-                  </ItemIcon>
-                  Home
-                </MobileMenuItem>
-                <MobileMenuItem
-                  onClick={() => {
-                    setMenuClicked(!menuClicked);
-                    window.location.href = '#about';
-                  }}
-                >
-                  <ItemIcon>
-                    <FiInfo />
-                  </ItemIcon>
-                  About me
-                </MobileMenuItem>
-                <MobileMenuItem
-                  onClick={() => {
-                    setMenuClicked(!menuClicked);
-                    window.location.href = '#skills';
-                  }}
-                >
-                  <ItemIcon>
-                    <FiSettings />
-                  </ItemIcon>
-                  Skills
-                </MobileMenuItem>
-                <MobileMenuItem
-                  onClick={() => {
-                    setMenuClicked(!menuClicked);
-                    window.location.href = '#portfolio';
-                  }}
-                >
-                  <ItemIcon>
-                    <FiBriefcase />
-                  </ItemIcon>
-                  Portfolio
-                </MobileMenuItem>
-                <MobileMenuItem
-                  onClick={() => {
-                    setMenuClicked(!menuClicked);
-                    window.location.href = '#contact';
-                  }}
-                >
-                  <ItemIcon>
-                    <FiAtSign />
-                  </ItemIcon>
-                  Contact me
-                </MobileMenuItem>
-              </MobileMenuItemContainer>
-            </MenuContainer>
-          )}
         </Content>
 
         <Background />

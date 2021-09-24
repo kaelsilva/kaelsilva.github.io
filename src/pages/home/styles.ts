@@ -1,8 +1,11 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { shade } from 'polished';
-import DisplayImage from '../../assets/skull-no-background.png';
+// import DisplayImage from '../../assets/skull-no-background.png';
+// import DisplayImage from '../../assets/IMG_20210923_152145.png';
 
 import AppearFromLeft from '../../components/animations/AppearFromLeft';
+
+const DisplayImage = 'https://i.imgur.com/Rq8sQlo.png';
 
 interface Menu {
   menuClicked: boolean;
@@ -223,7 +226,8 @@ export const Subtitle = styled.div`
 export const Background = styled.div`
   flex: 1;
   background: #f205b3 url(${DisplayImage}) no-repeat center;
-  background-size: cover;
+  margin-top: 8vh;
+  background-size: 70vh;
 `;
 
 export const GlobalStyle = createGlobalStyle<Menu>`

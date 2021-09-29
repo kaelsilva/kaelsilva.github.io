@@ -17,7 +17,13 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "cypress"
+  ],
   "rules": {
     "camelcase": "off",
     "@typescript-eslint/camelcase": "off",
@@ -37,7 +43,13 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error"
   },
   "settings": {
     "import/resolver": {

@@ -14,11 +14,15 @@ If you use Yarn, you can just run `yarn` and all dependencies will be installed.
 ### npm
 If you use npm, run `npm install` and all dependencies will be installed. Then you can run `npm run start` and the application will be accessible at **http://localhost:3000**.
 
-### Docker image
-If you want to use an Docker image of this project, first install its dependencies with `yarn` or `npm install`, then run `yarn build` or `npm run build` and you'll see that a new folder called **build** will appear in the project's root folder.  
+## Docker image
+This project is available at Docker Hub. You can start the project locally as a container by running  
+`docker run --name kaelsilva.github.io -d -p 3000:80 kaelsilva/kaelsilva.github.io:v1`  
+and then accessing **http://localhost:3000** on your browser.
+
+### Building docker image locally
   
-Run `docker build -t kaelsilva.github.io-nginx .` and the static page files under **build/** folder will be built into a docker image called **kaelsilva.github.io-nginx**.
+You can also build locally your own docker image. Run `docker build -t kaelsilva/kaelsilva.github.io:v1 .` and the docker image will be built locally into a docker image called **kaelsilva/kaelsilva.github.io:v1**.
 
 Now you can create the docker container with the web application running on nginx. Run  
-`docker run --name kaelsilva.github.io -d -p 3000:80 kaelsilva.github.io-nginx`  
+`docker run --name kaelsilva.github.io -d -p 3000:80 kaelsilva/kaelsilva.github.io:v1`  
 and the application will be available at **http://localhost:3000**.

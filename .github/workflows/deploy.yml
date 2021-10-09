@@ -1,12 +1,23 @@
 name: Deploy to branch
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   deploy-app:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy
+      - name: Checkout
         uses: actions/checkout@v2
-        with: 
-          deploy: npm run deploy
+
+      - name: Build
+        run:
+          npm run build
+
+      - name: Deploy app
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.

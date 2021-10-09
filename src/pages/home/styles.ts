@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import AppearFromLeft from '../../components/animations/AppearFromLeft';
 
 const DisplayImage = 'https://i.imgur.com/Rq8sQlo.png';

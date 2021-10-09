@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import {
-  FiMenu,
-  FiX,
-  FiHome,
-  FiInfo,
   FiBriefcase,
-  FiSettings,
-  FiAtSign,
   FiLinkedin,
   FiMail,
   FiGithub,
@@ -22,24 +16,19 @@ import {
   GlobalStyle,
   Greetings,
   Subtitle,
-  ExploreContainer,
-  ExploreItem,
-  MobileMenu,
   AnimationContainer,
-  MenuContainer,
-  MenuIconContainer,
   ItemIcon,
   Title,
   Topic,
   Paragraph,
   ContactIcons,
-  MobileMenuItem,
-  MobileMenuItemContainer,
   AboutContainer,
   SkillsContainer,
   PortfolioContainer,
   ContactContainer,
 } from './styles';
+
+import Toolbar from '../../components/Toobar';
 
 const Home: React.FC = () => {
   const [menuClicked, setMenuClicked] = useState<boolean>(true);
@@ -49,105 +38,7 @@ const Home: React.FC = () => {
   return (
     <>
       <GlobalStyle menuClicked={menuClicked} />
-      <ExploreContainer>
-        <MobileMenu>
-          <FiMenu size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
-        </MobileMenu>
-        <ExploreItem href="#">
-          <ItemIcon>
-            <FiHome />
-          </ItemIcon>
-          Home
-        </ExploreItem>
-        <ExploreItem href="#about">
-          <ItemIcon>
-            <FiInfo />
-          </ItemIcon>
-          About me
-        </ExploreItem>
-        <ExploreItem href="#skills">
-          <ItemIcon>
-            <FiSettings />
-          </ItemIcon>
-          Skills
-        </ExploreItem>
-        <ExploreItem href="#portfolio">
-          <ItemIcon>
-            <FiBriefcase />
-          </ItemIcon>
-          Portfolio
-        </ExploreItem>
-        <ExploreItem href="#contact">
-          <ItemIcon>
-            <FiAtSign />
-          </ItemIcon>
-          Contact me
-        </ExploreItem>
-        {!menuClicked && (
-          <MenuContainer>
-            <MenuIconContainer>
-              <FiX size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
-            </MenuIconContainer>
-            <MobileMenuItemContainer>
-              <MobileMenuItem
-                onClick={() => {
-                  setMenuClicked(!menuClicked);
-                  window.location.href = '#';
-                }}
-              >
-                <ItemIcon>
-                  <FiHome />
-                </ItemIcon>
-                Home
-              </MobileMenuItem>
-              <MobileMenuItem
-                onClick={() => {
-                  setMenuClicked(!menuClicked);
-                  window.location.href = '#about';
-                }}
-              >
-                <ItemIcon>
-                  <FiInfo />
-                </ItemIcon>
-                About me
-              </MobileMenuItem>
-              <MobileMenuItem
-                onClick={() => {
-                  setMenuClicked(!menuClicked);
-                  window.location.href = '#skills';
-                }}
-              >
-                <ItemIcon>
-                  <FiSettings />
-                </ItemIcon>
-                Skills
-              </MobileMenuItem>
-              <MobileMenuItem
-                onClick={() => {
-                  setMenuClicked(!menuClicked);
-                  window.location.href = '#portfolio';
-                }}
-              >
-                <ItemIcon>
-                  <FiBriefcase />
-                </ItemIcon>
-                Portfolio
-              </MobileMenuItem>
-              <MobileMenuItem
-                onClick={() => {
-                  setMenuClicked(!menuClicked);
-                  window.location.href = '#contact';
-                }}
-              >
-                <ItemIcon>
-                  <FiAtSign />
-                </ItemIcon>
-                Contact me
-              </MobileMenuItem>
-            </MobileMenuItemContainer>
-          </MenuContainer>
-        )}
-      </ExploreContainer>
+      <Toolbar />
 
       <Container id="home">
         <Content>

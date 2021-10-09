@@ -31,13 +31,9 @@ import {
 import Toolbar from '../../components/Toobar';
 
 const Home: React.FC = () => {
-  const [menuClicked, setMenuClicked] = useState<boolean>(true);
-
-  // useEffect(() => setMenuClicked(true), [menuClicked]);
-
   return (
     <>
-      <GlobalStyle menuClicked={menuClicked} />
+      <GlobalStyle />
       <Toolbar />
 
       <Container id="home">

@@ -1,14 +1,7 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
-// import DisplayImage from '../../assets/skull-no-background.png';
-// import DisplayImage from '../../assets/IMG_20210923_152145.png';
-
 import AppearFromLeft from '../../components/animations/AppearFromLeft';
 
 const DisplayImage = 'https://i.imgur.com/Rq8sQlo.png';
-
-interface Menu {
-  menuClicked: boolean;
-}
 
 export const ContactContainer = styled.article`
   display: flex;
@@ -171,17 +164,11 @@ export const Background = styled.div`
   background-size: 70vh;
 `;
 
-export const GlobalStyle = createGlobalStyle<Menu>`
+export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
     text-decoration: none;
-
-    ${props =>
-      !props.menuClicked &&
-      css`
-        overflow: hidden;
-      `}
   }
 
   a {

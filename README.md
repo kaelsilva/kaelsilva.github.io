@@ -1,6 +1,7 @@
 # kaelsilva.github.io
 
-[![Tests](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml)
+[![Automated Tests](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml/badge.svg?branch=version-2)](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml)
+[![Deploy](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/deploy.yml)
 
 This is my personal landing page coded with TypeScript and React.  
 It also contains Cypress and Testing Library tests for CI integration with GitHub Actions.

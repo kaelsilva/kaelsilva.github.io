@@ -36,6 +36,9 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "eslint-disable react/react-in-jsx-scope": "off",
+    "treact/react-in-jsx-scope": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

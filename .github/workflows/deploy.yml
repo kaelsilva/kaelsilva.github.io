@@ -23,11 +23,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           
       - name: Run install & build
-<<<<<<< HEAD
-        run:
-          npm install && npm run build
-=======
->>>>>>> 2d90154 (ci: fix workflow script)
         run:
           npm install && npm run build
 

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import styles from "./Toolbar.module.css";
+import { useState } from "react";
 import {
   FiMenu,
   FiX,
@@ -7,7 +8,7 @@ import {
   FiHome,
   FiInfo,
   FiBriefcase,
-} from 'react-icons/fi';
+} from "react-icons/fi";
 
 import {
   ExploreContainer,
@@ -18,9 +19,9 @@ import {
   MobileMenuItem,
   MobileMenuItemContainer,
   ItemIcon,
-} from './styles';
+} from "./styles";
 
-const Toolbar: React.FC = () => {
+const Toolbar = () => {
   const [menuClicked, setMenuClicked] = useState<boolean>(true);
 
   return (
@@ -68,7 +69,7 @@ const Toolbar: React.FC = () => {
               <MobileMenuItem
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#';
+                  window.location.href = "#";
                 }}
               >
                 <ItemIcon>
@@ -79,7 +80,7 @@ const Toolbar: React.FC = () => {
               <MobileMenuItem
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#about';
+                  window.location.href = "#about";
                 }}
               >
                 <ItemIcon>
@@ -90,7 +91,7 @@ const Toolbar: React.FC = () => {
               <MobileMenuItem
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#skills';
+                  window.location.href = "#skills";
                 }}
               >
                 <ItemIcon>
@@ -101,7 +102,7 @@ const Toolbar: React.FC = () => {
               <MobileMenuItem
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#portfolio';
+                  window.location.href = "#portfolio";
                 }}
               >
                 <ItemIcon>
@@ -112,7 +113,7 @@ const Toolbar: React.FC = () => {
               <MobileMenuItem
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#contact';
+                  window.location.href = "#contact";
                 }}
               >
                 <ItemIcon>

@@ -1,37 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# kaelsilva.github.io
 
-## Getting Started
-[![Automated Tests](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml)
+[![Automated Tests](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml/badge.svg?branch=version-2)](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/main.yml)
 [![Deploy](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/kaelsilva/kaelsilva.github.io/actions/workflows/deploy.yml)
 
+This is my personal landing page coded with TypeScript and React.  
+It also contains Cypress and Testing Library tests for CI integration with GitHub Actions.
 
-First, run the development server:
+You can check the deploy at [kaelsilva.github.io](https://kaelsilva.github.io).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Setup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Yarn
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+If you use Yarn, you can just run `yarn` and all dependencies will be installed. After this, run `yarn start` and the application will be accessible at **http://localhost:3000**.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### npm
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+If you use npm, run `npm install` and all dependencies will be installed. Then you can run `npm run start` and the application will be accessible at **http://localhost:3000**.
 
-## Learn More
+## Docker image
 
-To learn more about Next.js, take a look at the following resources:
+This project is available at Docker Hub. You can start the project locally as a container by running  
+`docker run --name kaelsilva.github.io -d -p 3000:80 kaelsilva/kaelsilva.github.io:v1`  
+and then accessing **http://localhost:3000** on your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running Tests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project uses React Testing Library and Cypress. To run the tests with Testing Library:  
+`yarn test:coverage` or `npm run test:coverage`  
+To run the tests with Cypress:  
+`yarn cypress:open` or `npm run cypress:open`
 
-## Deploy on Vercel
+### Building docker image locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can also build locally your own docker image. Run `docker build -t kaelsilva/kaelsilva.github.io:v1 .` and the docker image will be built locally into a docker image called **kaelsilva/kaelsilva.github.io:v1**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Now you can create the docker container with the web application running on nginx. Run  
+`docker run --name kaelsilva.github.io -d -p 3000:80 kaelsilva/kaelsilva.github.io:v1`  
+and the application will be available at **http://localhost:3000**.

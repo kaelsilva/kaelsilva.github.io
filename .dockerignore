@@ -3,3 +3,4 @@ build
 cypress
 .github
 cypress.json
+yarn.lock

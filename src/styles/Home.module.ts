@@ -1,7 +1,7 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import AppearFromLeft from '../../components/animations/AppearFromLeft';
+import styled, { createGlobalStyle } from "styled-components";
+import AppearFromLeft from "../components/animations/AppearFromLeft";
 
-const DisplayImage = 'https://i.imgur.com/Rq8sQlo.png';
+const DisplayImage = "https://i.imgur.com/Rq8sQlo.png";
 
 export const ContactContainer = styled.article`
   display: flex;
@@ -32,13 +32,13 @@ export const Topic = styled.section`
   padding: 0;
   color: #f205cb;
   list-style: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 22px;
   min-width: 26vw;
 `;
 
 export const Title = styled.div`
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
   color: #f205cb;
   display: flex;
@@ -51,7 +51,7 @@ export const Title = styled.div`
 
 export const Paragraph = styled.p`
   color: #0388a6;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 
   ${SkillsContainer} & {
@@ -127,7 +127,7 @@ export const AnimationContainer = styled.div`
 export const MarketName = styled.div`
   color: #f205cb;
   font-size: 64px;
-  font-family: 'Audiowide', 'Roboto', sans-serif;
+  font-family: "Audiowide", "Roboto", sans-serif;
 
   display: flex;
   justify-content: center;
@@ -136,7 +136,7 @@ export const MarketName = styled.div`
 
 export const Greetings = styled.div`
   color: #0388a6;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
 
   display: flex;
@@ -147,14 +147,14 @@ export const Greetings = styled.div`
 `;
 
 export const Subtitle = styled.div`
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #bf046b;
   letter-spacing: 5px;
 
   display: flex;
   justify-content: center;
   align-self: flex-end;
-  margin-right: 25%;
+  margin-right: 10%;
 `;
 
 export const Background = styled.div`

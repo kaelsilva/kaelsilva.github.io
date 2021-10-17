@@ -1,4 +1,7 @@
-import React from 'react';
+import type { NextPage } from "next";
+import Head from "next/head";
+import Toolbar from "../components/Toolbar";
+import styles from "../styles/Home.module.css";
 import {
   FiBriefcase,
   FiLinkedin,
@@ -6,7 +9,7 @@ import {
   FiGithub,
   FiBook,
   FiCoffee,
-} from 'react-icons/fi';
+} from "react-icons/fi";
 
 import {
   MarketName,
@@ -26,14 +29,16 @@ import {
   SkillsContainer,
   PortfolioContainer,
   ContactContainer,
-} from './styles';
+} from "../styles/Home.module";
 
-import Toolbar from '../../components/Toobar';
-
-const Home: React.FC = () => {
+const Home: NextPage = () => {
   return (
     <>
       <GlobalStyle />
+
+      <Head>
+        <title>Kael Silva</title>
+      </Head>
       <Toolbar />
 
       <Container id="home">
@@ -95,12 +100,13 @@ const Home: React.FC = () => {
         <Title>Skills</Title>
         <SkillsContainer>
           <Paragraph>
-            I’m initially focused in developing web apps with the{' '}
-            <strong>Node</strong>, <strong>React</strong> (including{' '}
-            <strong>Next.js</strong>), <strong>Docker</strong> and{' '}
+            I’m initially focused in developing web apps with the{" "}
+            <strong>Node</strong>, <strong>React</strong> (including{" "}
+            <strong>Next.js</strong>), <strong>Docker</strong> and{" "}
             <strong>AWS</strong>. However, I see no problem with using a
-            different tool that I’ve no contact with so far, let’s say{' '}
-            <strong>Azure</strong> for cloud, for example. I'm familiarized with
+            different tool that I’ve no contact with so far, let’s say{" "}
+            <strong>Azure</strong> for cloud, for example. I{"'"}m familiarized
+            with
             <strong>SQL</strong> and <strong>NoSQL</strong> databases, querying,
             functions, procedures, ORMs for easy connection between applications
             and databases and <strong>RESTful</strong> APIs.
@@ -110,7 +116,7 @@ const Home: React.FC = () => {
             I use primarly <strong>Linux</strong> distros, since it has so much
             helpful features for developing and most of servers use it too.
             Therefore, I’m familiar with shell scripts and pretty much of the
-            <strong> Linux</strong> peculiarities. Also, I use{' '}
+            <strong> Linux</strong> peculiarities. Also, I use{" "}
             <strong>Python</strong> for some specific scripts that allow me to
             automate specific tasks that I want to do from time to time and
             eventually <strong>MATLAB</strong> for some math scripts,
@@ -136,7 +142,7 @@ const Home: React.FC = () => {
             <ItemIcon
               onClick={() =>
                 window.open(
-                  'https://www.linkedin.com/in/kaelsilva/?locale=en_US',
+                  "https://www.linkedin.com/in/kaelsilva/?locale=en_US"
                 )
               }
             >
@@ -144,13 +150,13 @@ const Home: React.FC = () => {
             </ItemIcon>
             <ItemIcon
               onClick={() =>
-                (window.location.href = 'mailto:kaelsilvaaraujo@gmail.com')
+                (window.location.href = "mailto:kaelsilvaaraujo@gmail.com")
               }
             >
               <FiMail size="28px" color="#fff" />
             </ItemIcon>
             <ItemIcon
-              onClick={() => window.open('https://www.github.com/kaelsilva')}
+              onClick={() => window.open("https://www.github.com/kaelsilva")}
             >
               <FiGithub size="28px" color="#fff" />
             </ItemIcon>

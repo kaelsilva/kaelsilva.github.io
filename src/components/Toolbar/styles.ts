@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { shade } from 'polished';
-import AppearFromLeft from '../animations/AppearFromLeft';
+import styled from "styled-components";
+import { shade } from "polished";
+import AppearFromLeft from "../animations/AppearFromLeft";
 
 export const ExploreContainer = styled.nav`
   position: fixed;
   background-color: #0388a6;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fff;
 
   display: flex;
@@ -59,7 +59,7 @@ export const ExploreItem = styled.a`
 
   &:hover {
     cursor: pointer;
-    background-color: ${shade(0.2, '#0388a6')};
+    background-color: ${shade(0.2, "#0388a6")};
   }
 `;
 
@@ -99,7 +99,7 @@ export const MobileMenuItem = styled.div`
   height: 10vh;
   width: 100vw;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   color: #fff;
 

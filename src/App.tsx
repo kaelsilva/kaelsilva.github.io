@@ -7,7 +7,7 @@ import Toolbar from './components/Toolbar';
 
 const App: React.FC = () => (
   <>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Toolbar />
       <Routes />
     </BrowserRouter>

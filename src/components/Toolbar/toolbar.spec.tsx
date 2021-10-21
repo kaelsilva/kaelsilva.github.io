@@ -1,17 +1,22 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import Toolbar from './index';
 
 describe('Test toolbar component', () => {
-  it('should be navigation element', () => {
-    render(<Toolbar />);
+  beforeEach(() => {
+    render(
+      <BrowserRouter>
+        <Toolbar />
+      </BrowserRouter>,
+    );
+  });
 
+  it('should be navigation element', () => {
     expect(screen.getByRole('navigation'));
   });
 
   it('should contain navigation buttons', () => {
-    render(<Toolbar />);
-
     const buttonText = [
       'Home',
       'About me',

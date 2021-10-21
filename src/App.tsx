@@ -1,26 +1,17 @@
 import React from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 import GlobalStyles from './GlobalStyles';
-
 import Toolbar from './components/Toolbar';
-
-import Home from './pages/Home';
-import About from './pages/About';
-import Skills from './pages/Skills';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
 
 const App: React.FC = () => (
   <>
+    <BrowserRouter>
+      <Toolbar />
+      <Routes />
+    </BrowserRouter>
     <GlobalStyles />
-
-    <Toolbar />
-
-    <Home />
-    <About />
-    <Skills />
-    <Portfolio />
-    <Contact />
   </>
 );
 

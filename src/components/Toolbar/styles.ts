@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
+import { Link } from 'react-router-dom';
 import AppearFromLeft from '../animations/AppearFromLeft';
 
 export const ExploreContainer = styled.nav`
@@ -38,7 +39,7 @@ export const MobileMenu = styled.div`
   }
 `;
 
-export const ExploreItem = styled.a`
+export const ExploreItem = styled(Link)`
   list-style-type: none;
   font-size: 20px;
 
@@ -49,6 +50,9 @@ export const ExploreItem = styled.a`
   justify-content: center;
   align-items: center;
   border-radius: 5%;
+
+  text-decoration: none;
+  color: #fff;
   /* border-color: #fff;
   border-width: 2px;
   border-style: groove; */
@@ -91,7 +95,7 @@ export const MenuIconContainer = styled.div`
   justify-content: flex-end;
 `;
 
-export const MobileMenuItem = styled.div`
+export const MobileMenuItem = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -101,6 +105,7 @@ export const MobileMenuItem = styled.div`
 
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
+  text-decoration: none;
   color: #fff;
 
   margin-top: 2vh;

@@ -29,31 +29,31 @@ const Toolbar: React.FC = () => {
         <MobileMenu>
           <FiMenu size="5vh" onClick={() => setMenuClicked(!menuClicked)} />
         </MobileMenu>
-        <ExploreItem href="#">
+        <ExploreItem to="/">
           <ItemIcon>
             <FiHome />
           </ItemIcon>
           Home
         </ExploreItem>
-        <ExploreItem href="#about">
+        <ExploreItem to="/about">
           <ItemIcon>
             <FiInfo />
           </ItemIcon>
           About me
         </ExploreItem>
-        <ExploreItem href="#skills">
+        <ExploreItem to="/skills">
           <ItemIcon>
             <FiSettings />
           </ItemIcon>
           Skills
         </ExploreItem>
-        <ExploreItem href="#portfolio">
+        <ExploreItem to="/portfolio">
           <ItemIcon>
             <FiBriefcase />
           </ItemIcon>
           Portfolio
         </ExploreItem>
-        <ExploreItem href="#contact">
+        <ExploreItem to="/contact">
           <ItemIcon>
             <FiAtSign />
           </ItemIcon>
@@ -66,9 +66,9 @@ const Toolbar: React.FC = () => {
             </MenuIconContainer>
             <MobileMenuItemContainer>
               <MobileMenuItem
+                to="/"
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#';
                 }}
               >
                 <ItemIcon>
@@ -77,9 +77,9 @@ const Toolbar: React.FC = () => {
                 Home
               </MobileMenuItem>
               <MobileMenuItem
+                to="/About"
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#about';
                 }}
               >
                 <ItemIcon>
@@ -88,9 +88,9 @@ const Toolbar: React.FC = () => {
                 About me
               </MobileMenuItem>
               <MobileMenuItem
+                to="/skills"
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#skills';
                 }}
               >
                 <ItemIcon>
@@ -99,9 +99,9 @@ const Toolbar: React.FC = () => {
                 Skills
               </MobileMenuItem>
               <MobileMenuItem
+                to="/portfolio"
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#portfolio';
                 }}
               >
                 <ItemIcon>
@@ -110,9 +110,9 @@ const Toolbar: React.FC = () => {
                 Portfolio
               </MobileMenuItem>
               <MobileMenuItem
+                to="/contact"
                 onClick={() => {
                   setMenuClicked(!menuClicked);
-                  window.location.href = '#contact';
                 }}
               >
                 <ItemIcon>

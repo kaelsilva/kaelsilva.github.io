@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import {
   AnimationContainer,
   Container,
@@ -9,18 +10,27 @@ import {
   Greetings,
 } from './styles';
 
-const Home: React.FC = () => (
-  <Container id="home">
-    <Content>
-      <AnimationContainer>
-        <Greetings>Hello! My name is</Greetings>
-        <MarketName>Kael Silva</MarketName>
-        <Subtitle>Full-stack Developer</Subtitle>
-      </AnimationContainer>
-    </Content>
+import { setGA } from '../../config/setGA';
 
-    <Background />
-  </Container>
-);
+const Home: React.FC = () => {
+  useEffect(() => {
+    setGA();
+    ReactGA.pageview('/');
+  });
+
+  return (
+    <Container id="home">
+      <Content>
+        <AnimationContainer>
+          <Greetings>Hello! My name is</Greetings>
+          <MarketName>Kael Silva</MarketName>
+          <Subtitle>Full-stack Developer</Subtitle>
+        </AnimationContainer>
+      </Content>
+
+      <Background />
+    </Container>
+  );
+};
 
 export default Home;

@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.a653c7c5.chunk.js",
-    "main.js.map": "/static/js/main.a653c7c5.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.07a36270.js",
-    "runtime-main.js.map": "/static/js/runtime-main.07a36270.js.map",
-    "static/js/2.8507d4db.chunk.js": "/static/js/2.8507d4db.chunk.js",
-    "static/js/2.8507d4db.chunk.js.map": "/static/js/2.8507d4db.chunk.js.map",
+    "main.js": "/static/js/main.ec529b84.chunk.js",
+    "main.js.map": "/static/js/main.ec529b84.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2b62677f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2b62677f.js.map",
+    "static/js/2.98fafba0.chunk.js": "/static/js/2.98fafba0.chunk.js",
+    "static/js/2.98fafba0.chunk.js.map": "/static/js/2.98fafba0.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.8507d4db.chunk.js.LICENSE.txt": "/static/js/2.8507d4db.chunk.js.LICENSE.txt"
+    "static/js/2.98fafba0.chunk.js.LICENSE.txt": "/static/js/2.98fafba0.chunk.js.LICENSE.txt",
+    "static/media/Audiowide-Regular.2017bdb1.ttf": "/static/media/Audiowide-Regular.2017bdb1.ttf",
+    "static/media/Roboto-Regular.fc2b5060.ttf": "/static/media/Roboto-Regular.fc2b5060.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.07a36270.js",
-    "static/js/2.8507d4db.chunk.js",
-    "static/js/main.a653c7c5.chunk.js"
+    "static/js/runtime-main.2b62677f.js",
+    "static/js/2.98fafba0.chunk.js",
+    "static/js/main.ec529b84.chunk.js"
   ]
 }
